@@ -6,6 +6,8 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'nokogiri'
 gem 'zodiac'
 gem 'sqlite3'
+gem 'slim'
+gem 'pry'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -15,3 +17,10 @@ end
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+
+group :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails', require: false
+  gem 'shoulda'
+  gem 'database_cleaner'
+end
