@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
 
-  before_filter :correct_user, :only =>:show
-
   def index
     @user = User.all
   end
@@ -28,12 +26,5 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
-
-  private
-
-    def correct_user
-      @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
-    end
 
 end
