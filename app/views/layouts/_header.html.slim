@@ -4,10 +4,10 @@
       = link_to 'Horoscope App', root_path, id: 'logo'
       nav
         ul.nav.pull-right
+          -if signed_in?
           li 
             = link_to "#{weathers_path}"
               | Weather: #{get_weather}
-          -if signed_in?
             li = link_to "Users", "#{users_path}"
             li#fat-menu.dropdown
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -17,6 +17,9 @@
               ul.dropdown-menu
                 li
                   = link_to "Profile", current_user
+                li.divider
+                li
+                  = link_to "Edit Profile", edit_user_path(id: current_user.id)
                 li.divider
                 li
                   = link_to "Sign out", signout_path, method: "delete"

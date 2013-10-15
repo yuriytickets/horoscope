@@ -17,7 +17,9 @@
 					td = user.birth_date
 					td = user.zodiac
 					- if current_user?(user)
-						td = link_to "my profile", current_user
+						td 
+							= link_to "My Profile", current_user, class: "btn btn-large btn-primary"
+							= link_to "Edit", edit_user_path(id: user.id), class: "btn btn-large btn-primary"
 					- else
-						td = link_to "profile", "#{user_path(id: user.id)}"
+						td = link_to "Profile", user_path(id: user.id), class: "btn btn-large btn-primary"
 	= will_paginate @user

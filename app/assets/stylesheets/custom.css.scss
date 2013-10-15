@@ -4,15 +4,12 @@
 @import "bootstrap";
 /* universal */
 
-html {
-  overflow-y: scroll;
-}
-
 body {
   padding-top: 60px;
 }
 .hero-unit{
   background: rgba(204, 204, 204, 0.8);
+  margin-bottom: 45px;
 }
 section {
   overflow: auto;
