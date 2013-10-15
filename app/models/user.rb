@@ -2,7 +2,6 @@ class User < ActiveRecord::Base
   attr_accessible :birth_date, :email, :name, :password, :password_confirmation, :zodiac
   has_secure_password
 
-  has_many :statistics
 
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
@@ -15,6 +14,8 @@ class User < ActiveRecord::Base
   validates :birth_date, presence: true
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true
+
+  has_many :statistics
 
   private
 

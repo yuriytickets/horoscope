@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(:version => 20131015092827) do
 
   create_table "statistics", :force => true do |t|
-    t.integer  "admin_id"
+    t.integer  "user_id"
     t.string   "ip_adress"
     t.float    "latitude"
     t.float    "longitude"

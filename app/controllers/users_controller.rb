@@ -35,4 +35,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(params[:user])
+      redirect_to users_path
+    else
+      flash[:error] = "Error"
+      redirect_to :back
+    end
+  end
+
 end
