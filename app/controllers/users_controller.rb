@@ -2,6 +2,10 @@ class UsersController < ApplicationController
 
   before_filter :correct_user, :only =>:show
 
+  def index
+    @user = User.all
+  end
+
   def new
     if !signed_in?
       @user = User.new
