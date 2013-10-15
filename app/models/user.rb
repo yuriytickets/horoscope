@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
   attr_accessible :birth_date, :email, :name, :password, :password_confirmation, :zodiac
   has_secure_password
 
+  has_many :statistics
+
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
   before_save :set_zodiac_sign

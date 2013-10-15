@@ -4,6 +4,9 @@
       = link_to 'Horoscope App', root_path, id: 'logo'
       nav
         ul.nav.pull-right
+          li 
+            = link_to "#{weathers_path}"
+              | Weather: #{get_weather}
           -if signed_in?
             li = link_to "Users", "#{users_path}"
             li#fat-menu.dropdown

@@ -1,0 +1,22 @@
+.hero-unit#pogoda
+	p.menu_head Weather
+	.body-weather#weather
+		table.table-bordered style="width:100%;"
+			tr
+				td colspan="2"
+					= image_tag "#{@img}", class: "pull-right"
+			tr
+				td Temperature
+				td = @temperature
+			tr
+				td Clouds
+				td #{@clouds} %
+			tr
+				td Humidity
+				td #{@humidity} %
+			tr
+				td Wind
+				td #{@wind} m/s
+			tr
+				td Pressure
+				td #{@pressure} hpa

@@ -21,3 +21,17 @@ body{
   -o-background-size: cover;
   background-size: cover;
 }
+.menu_head {
+  padding: 5px;
+  cursor: pointer;
+  position: relative;
+  margin:2px;
+  background: #121212;
+  color:#fff;
+}
+.body-weather {
+  padding: 5px;
+  margin: 0px;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
