@@ -8,6 +8,7 @@ gem 'zodiac'
 gem 'sqlite3'
 gem 'slim'
 gem 'pry'
+gem 'will_paginate'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

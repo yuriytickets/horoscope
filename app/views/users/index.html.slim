@@ -1,21 +1,23 @@
-table.table.table-striped.table-bordered
-	thead
-		tr
-			th id
-			th Name
-			th Email
-			th Birth Day
-			th Zodiac
-			th Show
-	tbody
-		- @user.each do |user|
+.hero-unit
+	table.table.table-striped.table-bordered
+		thead
 			tr
-				td = user.id
-				td = user.name
-				td = user.email
-				td = user.birth_date
-				td = user.zodiac
-				- if current_user?(user)
-					td = link_to "my profile", current_user
-				- else
-					td = link_to "profile", "#{user_path(id: user.id)}"
+				th id
+				th Name
+				th Email
+				th Birth Day
+				th Zodiac
+				th Show
+		tbody
+			- @user.each do |user|
+				tr
+					td = user.id
+					td = user.name
+					td = user.email
+					td = user.birth_date
+					td = user.zodiac
+					- if current_user?(user)
+						td = link_to "my profile", current_user
+					- else
+						td = link_to "profile", "#{user_path(id: user.id)}"
+	= will_paginate @user

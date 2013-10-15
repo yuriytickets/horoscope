@@ -11,7 +11,9 @@ html {
 body {
   padding-top: 60px;
 }
-
+.hero-unit{
+  background: rgba(204, 204, 204, 0.8);
+}
 section {
   overflow: auto;
 }
@@ -106,4 +108,7 @@ input {
 
 .ui-datepicker-year {
   padding: 4px 10px 4px 10px;
+}
+table {
+  background: rgba(204, 204, 204, 0.8);
 }

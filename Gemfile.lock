@@ -152,6 +152,7 @@ GEM
     uglifier (2.2.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    will_paginate (3.0.4)
     zodiac (0.2.5)
       funtimes
       i18n
@@ -177,4 +178,5 @@ DEPENDENCIES
   slim
   sqlite3
   uglifier (>= 1.0.3)
+  will_paginate
   zodiac

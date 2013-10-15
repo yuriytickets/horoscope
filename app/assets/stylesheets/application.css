@@ -11,3 +11,13 @@
  *= require_tree .
  *= require jquery.ui.all
  */
+
+body{
+  background: #adadad url("http://miriadna.com/desctopwalls/images/max/Light-blue-space.jpg") top no-repeat;
+  font-family: "arial", "arial", sans-serif;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
