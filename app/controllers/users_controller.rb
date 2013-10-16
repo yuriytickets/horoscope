@@ -1,7 +1,12 @@
 class UsersController < ApplicationController
 
   def index
-    @user = User.paginate(page: params[:page], per_page: 5)
+    if signed_in?
+      @user = current_user
+    else
+      flash[:error] = "you need to sign in"
+      redirect_to(root_url)
+    end
   end
 
   def new
@@ -44,5 +49,4 @@ class UsersController < ApplicationController
       redirect_to :back
     end
   end
-
 end
