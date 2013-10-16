@@ -3,6 +3,10 @@ class WeathersController < ApplicationController
   	if signed_in?
 	  	lat = request.location.latitude
 		lon = request.location.longitude
+  		if lat == 0.0 && lon == 0.0
+			lat = 50
+			lon = 30
+		end
 		doc = Nokogiri::XML(open("http://api.openweathermap.org/data/2.5/weather?lat=#{lat}&lon=#{lon}&mode=html"))
 		@img = doc.css("body div")[1].css("div")[1].css("img")[0]["style"].match(/http:\/.*png/)[0]
 		@temperature = doc.css("body div")[1].css("div")[3].text
