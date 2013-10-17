@@ -35,3 +35,18 @@ body{
   word-wrap: break-word;
   line-height: 1.5;
 }
+
+.comment h4 {
+  float: left;
+}
+.comment {
+  margin-top: 20px;
+}
+.com p {
+  text-align: justify;
+  padding-top: 50px;
+  margin-left: 50px;
+}
+.com-btn {
+  margin-right: 100%;
+}
