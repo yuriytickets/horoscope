@@ -26,7 +26,13 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    if current_user.id == params[:id].to_i
+      @user = User.find(params[:id])
+      @comments = @user.comment_threads.order('created_at desc')
+      @new_comment = Comment.build_from(@user, current_user, "")
+    else
+      redirect_to root_path
+    end
   end
 
   def create

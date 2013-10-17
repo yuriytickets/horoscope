@@ -10,6 +10,8 @@ gem 'slim'
 gem 'pry'
 gem 'will_paginate'
 gem 'geocoder'
+gem 'acts_as_commentable_with_threading'
+gem 'simple_form'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
