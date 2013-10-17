@@ -1,14 +1,4 @@
-.hero-unit
-	table.table-bordered style="width:100%;"
-		tr
-			td rowspan="2" img
-			td
-				h2 =@user.name
-			td rowspan="2" 3
-		tr
-			td 
-				p =@user.email
-				p =@user.birth_date
-				p =@user.zodiac
-		tr 
-			td colspan="3" 8
+.center.hero-unit
+	h1 = @user.name
+	h2 Your forecast for today:
+	p = get_horoscope(@user.zodiac)

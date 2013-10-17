@@ -9,6 +9,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find(params[:id])
+    @comments = @user.comment_threads.order('created_at desc')
+    @new_comment = Comment.build_from(@user, current_user, "")
+  end
+
   def new
     if !signed_in?
       @user = User.new
@@ -25,11 +31,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
-    @user = User.find(params[:id])
-    @comments = @user.comment_threads.order('created_at desc')
-    @new_comment = Comment.build_from(@user, current_user, "")
-  end
 
   def create
     @user = User.new(params[:user])

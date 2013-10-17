@@ -1,0 +1,17 @@
+.hero-unit
+	table.table-bordered style="width:100%;"
+		tr
+			td rowspan="2" img
+			td
+				h2 =@user.name
+			td rowspan="2" 3
+		tr
+			td 
+				p =@user.email
+				p =@user.birth_date
+				p =@user.zodiac
+		tr 
+			td colspan="3" 8
+	h2 Comments
+	= render :partial => 'comments/form', :locals => { :comment => @new_comment }
+	= render :partial => 'comments/comment', :collection => @comments, :as => :comment

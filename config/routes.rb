@@ -15,6 +15,6 @@ Horoscope::Application.routes.draw do
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
   match '/weather',  to: 'weathers#index'
-  match '/profile', to: 'users#index'
+  match '/horoscope', to: 'users#index'
   match '/all_users', to: 'home#all_users'
 end
