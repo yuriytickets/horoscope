@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
 
-  attr_accessible :birth_date, :email, :name, :password, :password_confirmation, :zodiac
+  attr_accessible :birth_date, :email, :name, :password, :password_confirmation, :zodiac, :updated_at
   has_secure_password
 
   acts_as_commentable

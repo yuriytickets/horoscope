@@ -1,10 +1,15 @@
+- status
 .hero-unit
 	table.table-bordered style="width:100%;"
 		tr
 			td rowspan="2" img
 			td
 				h3.pull-left =@user.name
-			td rowspan="2" 3
+			td rowspan="2" 
+				- if @user.updated_at == DateTime.now
+					|online
+				-else
+					=@user.updated_at
 		tr
 			td
 				table.table-bordered style="width:100%;"

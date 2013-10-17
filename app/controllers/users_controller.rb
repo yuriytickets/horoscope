@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       redirect_to(root_url)
     end
   end
-
+  
   def new
     if !signed_in?
       @user = User.new
