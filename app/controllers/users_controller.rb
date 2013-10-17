@@ -10,9 +10,14 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    @comments = @user.comment_threads.order('created_at desc')
-    @new_comment = Comment.build_from(@user, current_user, "")
+    if signed_in?
+      @user = User.find(params[:id])
+      @comments = @user.comment_threads.order('created_at desc')
+      @new_comment = Comment.build_from(@user, current_user, "")
+    else
+      flash[:error] = "you need to sign in"
+      redirect_to(root_url)
+    end
   end
 
   def new
@@ -24,10 +29,14 @@ class UsersController < ApplicationController
   end
 
   def edit
-    if current_user.id == params[:id].to_i
+    if !signed_in?
+      flash[:error] = "you need to sign in"
+      redirect_to(root_url)
+    elsif current_user.id == params[:id].to_i
       @user = User.find(params[:id])
     else
-      redirect_to root_path
+      flash[:error] = "error"
+      redirect_to(root_url)
     end
   end
 

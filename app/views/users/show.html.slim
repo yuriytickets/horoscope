@@ -3,15 +3,22 @@
 		tr
 			td rowspan="2" img
 			td
-				h2 =@user.name
+				h3.pull-left =@user.name
 			td rowspan="2" 3
 		tr
-			td 
-				p =@user.email
-				p =@user.birth_date
-				p =@user.zodiac
+			td
+				table.table-bordered style="width:100%;"
+					tr
+						td style="width:90px; text-align:right;" Email:
+						td =@user.email
+					tr
+						td style="width:90px; text-align:right;" Birth date:
+						td =@user.birth_date
+					tr 
+						td style="width:90px; text-align:right;" Zodiac:
+						td =@user.zodiac
 		tr 
 			td colspan="3" 8
-	h2 Comments
+	h3.pull-left Comments
 	= render :partial => 'comments/form', :locals => { :comment => @new_comment }
 	= render :partial => 'comments/comment', :collection => @comments, :as => :comment

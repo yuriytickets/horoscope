@@ -50,3 +50,12 @@ body{
 .com-btn {
   margin-right: 100%;
 }
+.ui-datepicker-trigger {
+  float: right;
+}
+#user_birth_date{
+  width: 90%;
+}
+.required {
+  width: 99%;
+}
