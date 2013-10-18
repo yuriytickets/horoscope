@@ -1,15 +1,11 @@
-- status
 .hero-unit
 	table.table-bordered style="width:100%;"
 		tr
 			td rowspan="2" style="width:150px;" =zodiac_avatar(@user.zodiac)
 			td
 				h3.pull-left =@user.name
-			td rowspan="2" 
-				- if @user.updated_at == DateTime.now
-					|online
-				-else
-					=@user.updated_at
+			td rowspan="2" style="text-align:center;"
+				= online?
 		tr
 			td
 				table style="width:100%;"

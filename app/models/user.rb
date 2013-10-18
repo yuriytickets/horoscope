@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   has_secure_password
 
   acts_as_commentable
-
+  
   before_save { |user| user.email = email.downcase }
   before_save :create_remember_token
   before_save :set_zodiac_sign
@@ -20,7 +20,6 @@ class User < ActiveRecord::Base
 
   has_many :statistics
   has_many :comment
-  
   
   private
 
