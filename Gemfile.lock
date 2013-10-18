@@ -87,6 +87,8 @@ GEM
       mini_portile (~> 0.5.0)
     nokogiri (1.6.0-x86-mingw32)
       mini_portile (~> 0.5.0)
+    pg (0.17.0)
+    pg (0.17.0-x86-mingw32)
     polyglot (0.3.3)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
@@ -191,6 +193,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   nokogiri
+  pg
   pry
   rails (= 3.2.13)
   rspec-rails

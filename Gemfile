@@ -29,3 +29,7 @@ group :test do
   gem 'shoulda'
   gem 'database_cleaner'
 end
+
+group :production do
+	gem 'pg'
+end
