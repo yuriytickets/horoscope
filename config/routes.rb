@@ -17,4 +17,6 @@ Horoscope::Application.routes.draw do
   match '/weather',  to: 'weathers#index'
   match '/horoscope', to: 'users#index'
   match '/all_users', to: 'home#all_users'
+  get '/edit/:id', to: 'users#edit', as: 'edit'
+  get '/profile/:id', to: 'users#show', as: 'profile'
 end

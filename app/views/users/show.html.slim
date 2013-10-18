@@ -1,7 +1,7 @@
 .hero-unit
 	table.table-bordered style="width:100%;"
 		tr
-			td rowspan="2" style="width:150px;" =zodiac_avatar(@user.zodiac)
+			td rowspan="2" style="width:140px;" =zodiac_avatar(@user.zodiac)
 			td
 				h3.pull-left =@user.name
 			td rowspan="2" style="text-align:center;"
@@ -20,6 +20,7 @@
 						td =@user.zodiac
 		tr 
 			td colspan="3" 8
+.hero-unit
 	h3.pull-left Comments
 	= render partial: 'comments/form', locals: { comment: @new_comment }
 	= render partial: 'comments/comment', collection: @comments, as: :comment
