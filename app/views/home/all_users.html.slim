@@ -15,7 +15,7 @@
 					td = user.name
 					td = user.email
 					td = user.birth_date
-					td = user.zodiac
+					td style="width:50px;" =zodiac_avatar(user.zodiac)
 					- if current_user?(user)
 						td 
 							= link_to "My Profile", current_user, class: "btn btn-large btn-primary"

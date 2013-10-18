@@ -2,7 +2,7 @@
 .hero-unit
 	table.table-bordered style="width:100%;"
 		tr
-			td rowspan="2" img
+			td rowspan="2" style="width:150px;" =zodiac_avatar(@user.zodiac)
 			td
 				h3.pull-left =@user.name
 			td rowspan="2" 
@@ -12,7 +12,7 @@
 					=@user.updated_at
 		tr
 			td
-				table.table-bordered style="width:100%;"
+				table style="width:100%;"
 					tr
 						td style="width:90px; text-align:right;" Email:
 						td =@user.email
@@ -25,5 +25,5 @@
 		tr 
 			td colspan="3" 8
 	h3.pull-left Comments
-	= render :partial => 'comments/form', :locals => { :comment => @new_comment }
-	= render :partial => 'comments/comment', :collection => @comments, :as => :comment
+	= render partial: 'comments/form', locals: { comment: @new_comment }
+	= render partial: 'comments/comment', collection: @comments, as: :comment
