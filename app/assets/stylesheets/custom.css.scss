@@ -109,3 +109,7 @@ input {
 table {
   background: rgba(204, 204, 204, 0.8);
 }
+.table td, .table th{
+  text-align: center;
+  vertical-align: text-top;
+}
