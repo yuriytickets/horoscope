@@ -5,7 +5,6 @@ gem 'bootstrap-sass'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'nokogiri'
 gem 'zodiac'
-gem 'sqlite3'
 gem 'slim'
 gem 'pry'
 gem 'will_paginate'
@@ -32,4 +31,7 @@ end
 
 group :production do
 	gem 'pg'
+end
+group :development do
+	gem 'sqlite3'
 end
