@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+ruby '2.3.4'
+gem 'rails', '4.2.5.1'
 gem 'bootstrap-sass'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'nokogiri'
