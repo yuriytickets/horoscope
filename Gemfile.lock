@@ -195,7 +195,7 @@ DEPENDENCIES
   nokogiri
   pg
   pry
-  rails (= 3.2.13)
+  rails (= 4.2.5.1)
   rspec-rails
   sass-rails (~> 3.2.3)
   shoulda
